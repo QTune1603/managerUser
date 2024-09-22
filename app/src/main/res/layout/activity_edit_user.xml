@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".activity.EditUser">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginTop="12dp"
+        android:columnCount="2"
+        android:rowCount="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Existing UserName -->
+        <TextView
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="UserName:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/un"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
+
+        <!-- Existing Password -->
+        <TextView
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="Password:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Mk"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textSize="24sp" />
+
+        <!-- Existing Full Name -->
+        <TextView
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="Full Name:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/full"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
+
+        <!-- Existing Email -->
+        <TextView
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="Email:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp" />
+
+        <!-- Telephone -->
+        <TextView
+            android:layout_row="4"
+            android:layout_column="0"
+            android:text="Tel:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/telEditText"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="phone"
+            android:textSize="24sp" />
+
+        <!-- Date of Birth -->
+        <TextView
+            android:layout_row="5"
+            android:layout_column="0"
+            android:text="Date of Birth:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dobEditText"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:ems="10"
+            android:inputType="date"
+            android:textSize="24sp" />
+
+        <!-- Gender -->
+        <TextView
+            android:layout_row="6"
+            android:layout_column="0"
+            android:text="Gender:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender_array" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.17" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
